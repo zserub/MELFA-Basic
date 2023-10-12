@@ -1,0 +1,130 @@
+{
+	"name": "MELFA-Basic Robot Language",
+	"scopeName": "source.prg",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#lineNumber"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"comment": {
+			"name": "comment.block.documentation",
+			"match": "'.*"
+		},
+		"lineNumber": {
+			"name": "meta.preprocessor.numeric",
+			"match": "^\\d+"
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.decimal",
+					"match": "(?<!\\w)-?\\d+(\\.\\d+)?"
+				},
+				{
+					"name": "constant.numeric.octal",
+					"match": "(?i)-?&O[0-7]+"
+				},
+				{
+					"name": "constant.numeric.hexadecimal",
+					"match": "(?i)-?&H[0-9A-F]+"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "(?i:\\b(While|Select|Case|Else(If)?|For|To|Return|Default|If|Then|Wth(If)?)\\b)"
+				},
+				{
+					"name": "keyword.control.end",
+					"match": "(?i:\\b(End(If| Select)?|FEnd|Next|WEnd|Break)\\b)"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "(?i:\\b(And|Not|Or|Xor)\\b)"
+				},
+				{
+					"name": "keyword.other.unit",
+					"match": "(?i:(\\b(Exit|Go(To|Sub)|Dly|Wait|Error|Priority|Reset Err|Stop|Hlt|Clear|Skip|X(Load|Run|Rst|Clr|Stp)))\\b)"
+				},
+				{
+					"name": "constant.language",
+					"match": "(?i:\\b(On|Off)\\b)"
+				},
+				{
+					"match": "!|\\$|%|&|\\-|\\+|~|==|=|!=|!==|<=|>=|#=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|/=|%=|\\+=|\\-=|&=|\\^=\\b",
+					"name": "keyword.operator.js"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double",
+			"begin": "\"",
+			"end": "\""
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "entity.name.type",
+					"match": "\\B\\*\\w*"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "markup.bold",
+					"match": "(?i:\\b(?:Call|Function|Def)\\b)"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "((\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)(?=\\(\\)?))"
+				},
+				{
+					"name": "storage.type",
+					"match": "(?i:(Pos|Jnt|Inte|Float))"
+				},
+				{
+					"name": "entity.name.tag",
+					"match": "(?i:(Mov|Mv(s|r|r2|r3|c|a| Tune|Spl)|Act|Ovrd|Spd|JOvrd|Cnt|Accel|Tool|Cmp( Jnt| Pos| Tool| Off|G)|Prec|Torq|JRC|Fine|Servo|H(Open|Close)|ColChk))"
+				}
+
+			]
+		},
+		"variables": {
+			"patterns":[
+				{
+					"name": "entity.name.variable",
+					"match": "(?i:\\b(M_\\w+|J_\\w+|P_\\w+))"
+				},
+				{
+					"name": "markup.inline.raw",
+					"match": "(?i:(\\.X|\\.Y|\\.Z))"
+				}
+			]
+		}
+	}
+}

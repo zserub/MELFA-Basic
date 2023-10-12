@@ -1,0 +1,303 @@
+{
+	"Move": {
+		"prefix": "mov",
+		"body": ["Mov ${1:Position}, ${2:Close Distance} Type ${3:Constant 1} ${4:Constant 2}"],
+		"description": "Joint interpolation"
+	},
+	"Move Straight": {
+		"prefix": "mvs",
+		"body": ["Mvs ${1:Position}, ${2:Close Distance} Type ${3:Constant 1} ${4:Constant 2}"],
+		"description": "Linear interpolation"
+	},
+	"Move Round": {
+		"prefix": "mvr",
+		"body": ["Mvr ${1:Start Point}, ${2:Transit Point}, ${3:End Point} Type ${4:Constant 1} ${5:Constant 2}"],
+		"description": "Circular interpolation"
+	},
+	"Move Round 2": {
+		"prefix": "mvr2",
+		"body": ["Mvr ${1:Start Point}, ${2:End Point}, ${3:Reference Point} Type ${4:Constant 1} ${5:Constant 2}"],
+		"description": "Circular interpolation 2"
+	},
+	"Move Round 3": {
+		"prefix": "mvr3",
+		"body": ["Mvr ${1:Start Point}, ${2:End Point}, ${3:Center Point} Type ${4:Constant 1} ${5:Constant 2}"],
+		"description": "Circular interpolation 3"
+	},
+	"Move Circular": {
+		"prefix": "mvr",
+		"body": ["Mvr ${1:Start Point}, ${2:Transit Point 1}, ${3:Transition Point 2}"],
+		"description": "Circular interpolation"
+	},
+	"Move Arch": {
+		"prefix": "mva",
+		"body": ["Mva ${1:Target Position},${2:Arch number}"],
+		"description": "Arch interpolation"
+	},
+	"Move Tune": {
+		"prefix": "mvtune",
+		"body": ["MvTune ${1:Operation Characteristic mode}"
+		],
+		"description": "Select the robot operating characteristics from one of the four modes"},
+	"Move Spline": {
+		"prefix": "mvspl",
+		"body": ["MvSpl ${1:SPline Number}, ${2:Speed}, ${3:Acceleration}, ${4:Frame transition}, ${5:Posture interpolation type}, ${6:Filter length}"],
+		"description": "Spline interpolation"
+	},
+	"Override": {
+		"prefix": "Ovrd",
+		"body": ["Ovrd ${1:Percentage}"],
+		"description": "This instruction specifies the speed of the robot movement as a value in the range from 1 to 100%. This is the override applied to the entire program."},
+	"Speed": {
+		"prefix": "spd",
+		"body": ["Spd ${1:value/M_NSpd}"
+		],
+		"description": "Designates the speed for the robot's linear and circular movements. This instruction also specifies the optimum speed control mode."},
+	"Joint Override": {
+		"prefix": "jovrd",
+		"body": ["JOvrd ${1:Percentage}"
+		],
+		"description": "Designates the override that is valid only during the robot's joint movements."},
+	"Continous movement mode": {
+		"prefix": "Cnt",
+		"body": ["Cnt ${1:Mode}, ${2:value 1}, ${3:value 2}"
+		],
+		"description": "Continuous movement control for interpolation"},
+	"Accelerate": {
+		"prefix": "accel",
+		"body": ["Accel ${1:Acceleration rate}, ${2:Deceleration rate}, ${3:Acceleration when moving upward}, ${4:Deceleration when moving upward}, ${5:Acceleration when moving downward}, ${6:Deceleration when moving downward}"],
+		"description": "Designate the robot's acceleration and deceleration speeds as a percentage"
+	},
+	"Compliance Joint": {
+		"prefix": "cmp jnt",
+		"body": ["Cmp ${1:Jnt}, ${2:Axis designation}",],
+		"description": "Start the soft control mode (compliance mode) of the specified axis in the JOINT coordinates system."
+	},
+	"Compliance OFF": {
+		"prefix": "cmp off",
+		"body": ["Cmp Off"],
+		"description": "Release the soft control mode (compliance mode)"
+	},
+	"Compliance Posture": {
+		"prefix": "cmp pos",
+		"body": ["Cmp Pos, ${1:Axis designation}"],
+		"description": "Start the soft control mode (compliance mode) of the specified axis in the XYZ coordinates system"
+	},
+	"Compliance Tool": {
+		"prefix": "cmp tool",
+		"body": ["Cmp Tool, ${1:Axis designation}"],
+		"description": "Start the soft control mode (compliance mode) of the specified axis in the TOOL coordinates system"
+	},
+	"Composition Gain": {
+		"prefix": "cmpg",
+		"body": ["CmpG ${1:X axis gain}, ${2:Y axis gain}, ${3:Z axis gain}, ${4:A axis gain}, ${5:B axis gain}, ${6:C axis gain}"],
+		"description": "Specify the softness of robot control"
+	},
+	"Precision": {
+		"prefix": "prec",
+		"body": ["Prec ${1:On/Off}"],
+		"description": "Enabling and disabling the high accuracy mode"
+	},
+	"Torque": {
+		"prefix": "torq",
+		"body": ["Torq ${1:Axis No}, ${2:Torque Limitation rate}"],
+		"description": "Designates the torque limit for each axis"
+	},
+	"Joint Roll Change": {
+		"prefix": "jrc",
+		"body": ["JRC ${1:+/-value}, ${2:Axis No}"],
+		"description": "rewrites the current coordinate values by adding +/-360 degrees to the current joint coordinate values of the applicable axis"
+	},
+	"Fine": {
+		"prefix": "fine",
+		"body": ["Fine ${1:No of pulses}, ${2:Acis No}"],
+		"description": "Completion conditions of the robot's positioning. It is invalid during the smooth movement control"
+	},
+	"Fine Joint": {
+		"prefix": "fine j",
+		"body": ["Fine ${1:Positioning Width}, ${2:Axis No}"],
+		"description": "Specifies the robot positioning complete conditions with a joint axis value. The Fine J command will be disabled during continuous operation control (Cnt 1). The Fine command or Fine P command will be disabled for all axes when the Fine J command is executed"
+	},
+	"Fine Pause": {
+		"prefix": "fine p",
+		"body": ["Fine ${1:Linear Distance}, P"],
+		"description": "Specifies the robot positioning complete conditions with a linear distance."
+	},
+	"Servo": {
+		"prefix": "servo",
+		"body": ["Servo ${1:On/Off}, ${2:Mechanism No}"],
+		"description": "Enables and disables the servo motor"
+	},
+	"With":{
+		"prefix": "wth",
+		"body": ["Wth ${1:Process}"],
+		"description": "A process is added to the interpolation motion"
+	},
+	"With If":{
+		"prefix": "wthif",
+		"body": ["WthIf ${1:Condition}, ${2:Process}"],
+		"description": "A process is conditionally added to the interpolation motion"
+	},
+	"Select":{
+		"prefix": "select",
+		"body": ["Select ${1:Condition}\n\tCase ${2:Expression}\n\t\t\n\t\tBreak\n\tDefault\n\t\t${3:Process}\n\t\tBreak\nEnd Select"],
+		"description": "Executes one of multiple statement blocks according to the condition expression value."
+	},
+	"Case":{
+		"prefix": "case",
+		"body": ["Case ${1:Expression}\n\t\t${2:Process}\n\tBreak"],
+		"description": "If the condition matches one of the Case items, the process will be executed"
+	},
+	"Go To":{
+		"prefix": "goto",
+		"body": ["GoTo ${1:Branch Destination}"],
+		"description": "Makes a program branch to the specified label step unconditionally"
+	},
+	"Go Subroutine":{
+		"prefix": "gosub",
+		"body": ["GoSub ${1:Call Destination}"],
+		"description": "Calls up the subroutine at the designated step label. Be sure to return from the jump destination using the ReturnReturn instruction"
+	},
+	"Reset Error": {
+		"prefix": "reset err",
+		"body": ["Reset Err"],
+		"description": "Resets an error generated in the robot controller"
+	},
+	"Call Program": {
+		"prefix": "callp",
+		"body": ["CallP ${1:Program Name}, ${2:Argument 1}, ${3:Argument 2}"],
+		"description": "Executes the specified program (by calling the program in a manner similar to using GoSubGoSub Return to call a subroutine). The execution returns to the main program when the EndEnd instruction or the final step in the sub program is reached."
+	},
+	"FProgram":{
+		"prefix": "fprm",
+		"body": ["FPrm ${1:Argument}"],
+		"description": "executes the specified program (by calling the program in a manner similar to using GoSubGoSub Return to call a subroutine). The execution returns to the main program when the EndEnd instruction or the final step in the sub program is reached"
+	},
+	"Delay":{
+		"prefix": "dly",
+		"body": ["Dly ${1:value}"],
+		"description": "waiting time or the output time"
+	},
+	"Function":{
+		"prefix": "function",
+		"body": ["Function ${1:Return value type} ${2:Procedure name}(${3:Argument 1})\n${4:Process}\nExit Function\nFEnd"],
+		"description": "Defines a function"
+	},
+	"Halt":{
+		"prefix": "hlt",
+		"body": ["Hlt"],
+		"description": "Interrupts the execution of the program which executed this Hlt command. In use of the multitasking function, the executing status of other programs is not affected."
+	},
+	"Include":{
+		"prefix": "#include",
+		"body": ["Include ${1:Program Name}"],
+		"description": "Includes the specified program"
+	},
+	"For loop":{
+		"prefix": "for",
+		"body": ["For ${1:Counter}=${2:Start Value} To ${3:End Value} Step ${4:Step Value}\n${5:Process}\nNext"],
+		"description": "Repeatedly executes the program between the For statement and Next statement until the end conditions are satisfied"
+	},
+	"While loop":{
+		"prefix": "while",
+		"body": ["While ${1:Condition}\n${2:Process}\nWEnd"],
+		"description": "The program between the While statement and WEnd statement is repeated until the loop conditions are satisfied."
+	},
+	"Open":{
+		"prefix": "open",
+		"body": ["Open \"${1:File Name}\" AS #${2:File No}"],
+		"description": "Open the file or communication lines."
+	},
+	"Print":{
+		"prefix": "print",
+		"body": ["Print #${1:File No}, ${2:\"Text\"}"],
+		"description": "Outputs data into a file (including communication lines). All data uses the Ascll format"
+	},
+	"Input":{
+		"prefix": "input",
+		"body": ["Input #${1:File No}, ${2:data name}"],
+		"description": "Inputs data into a file (including communication lines). Only ASCII character data can be received."
+	},
+	"Close":{
+		"prefix": "close",
+		"body": ["Close #${1:File No}"],
+		"description": "Closes the file or communication lines."
+	},
+	"Save":{
+		"prefix": "save",
+		"body": ["Save \"${1:type}, ${2:Slot No}"],
+		"description": "Saves a program"  
+	},
+	"Collusion Check":{
+		"prefix": "colchk",
+		"body": ["ColChk ${1:On/Off}"],
+		"description": "Set to enable/disable the collision detection function in automatic operation."
+	},
+	"Hand Open":{
+		"prefix": "hopen",
+		"body": ["HOpen ${1:No}${2:, ${3:starting grasp force}, ${4:Holding grasp force}, ${5:Starting grasp force holding time}}"],
+		"description": "Open the hand"
+	},
+	"Hand Close":{
+		"prefix": "hclose",
+		"body": ["HClose ${1:No}"],
+		"description": "Close the hand"
+	},
+	"Error":{
+		"prefix": "error",
+		"body": ["Error ${1:No}"],
+		"description": "program generate an error (9000s number)"
+	},
+	"Skip":{
+		"prefix": "skip",
+		"body": ["Skip"],
+		"description": "Transfers control of the program to the next step."
+	},
+	"Wait":{
+		"prefix": "wait",
+		"body": ["Wait ${1:variable} = ${2:value}"],
+		"description": "Waits for the variable to reach the designated value."
+	},
+	"Clear":{
+		"prefix": "clear",
+		"body": ["Clear ${1:type}"],
+		"description": "Clears general-purpose output signals, local numerical variables in a program, and numerical external variables"
+	},
+	"Multi-task commands":{
+		"prefix": "x",
+		"body": ["X${1|Load,Run,Stp,Rst,Clr|}"],
+		"description": "Commands for another task slot"
+	},
+	"Priority":{
+		"prefix": "priority",
+		"body": ["Priority ${1:No}${2:, ${3:Slot No}}"],
+		"description": "Sets the priority of are executed in multitask operation"
+	},
+	"Position variables":{
+		"prefix": "p-",
+		"body": ["P_${1|Curr,Fbc,Safe,Tool,Base,WkCord,ColDir,CordR,CurrR,CavDir,TrkBase,TrkWork,TrkTarget,TrkPAcl,TrkPDcl,TrkPixel,Zero|}"],
+		"description": "Position variables for several tasks"
+	},
+	"Joint variables":{
+		"prefix": "j-",
+		"body": ["J_${1|Curr,ECurr,Origin,Fbc,AmpFbc|}"],
+	},
+	"Command variables":{
+		"prefix": "m-",
+		"body": ["M_${1|Fbd,CmpDst,CmpLmt,AmpFbc,Tool,BsNo,OPovrd,Ovrd,JOvrd,NOvrd,NJovrd,Ratio,RDst,Spd,NSpd,RSpd,Acl,DAcl,NAcl,NDacl,ACclSts,SetAdl,LdFact,LdFMax|}"],
+		"description": "Command variables for several tasks"
+	},
+	"Status variables":{
+		"prefix": "m-s",
+		"body": ["M_${1|Run,Wai,Psa,Err,Cys,Cstp,Line,SkipCq,BrkCq,ErrLvl,Errno,ErCode,Svo,Uar,Mode|}"],
+		"description": "Status variables for several tasks"
+	},
+	"I/O signals":{
+		"prefix": ["mi", "mo"],
+		"body": ["M_${1|In,Inb,In8,Inw,In16,In32,Out,Outb,Out8,Outw,Out16,Out32,Dln,Dln32,DOut,DOut32,HndCq,XDev,XDevB,XDevW,XDevD,YDev,YDevB,YDevW,YDevD|}"],
+		"description": "I/O signals for several tasks"
+	}
+
+
+
+}

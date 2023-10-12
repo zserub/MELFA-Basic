@@ -1,0 +1,50 @@
+{
+  "name": "melfa-basic",
+  "displayName": "MELFA-Basic",
+  "description": "Mitsubishi robot programming language",
+  "version": "0.0.3",
+  "publisher": "Metaphysix",
+  "engines": {
+    "vscode": "^1.83"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "prg",
+        "extensions": [
+          ".prg"
+        ],
+        "aliases": [
+          "MELFA-Basic",
+          "prg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "prg",
+        "scopeName": "source.prg",
+        "path": "./syntaxes/prg.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "prg",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Dark Theme for MELFA-Basic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Dark Theme for MELFA-Basic-color-theme.json"
+      }
+    ]
+  }
+}
