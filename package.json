@@ -1,16 +1,30 @@
 {
   "name": "melfa-basic",
   "displayName": "MELFA-Basic",
-  "description": "Mitsubishi robot programming language",
-  "version": "0.0.3",
-  "publisher": "Metaphysix",
+  "description": "Mitsubishi robot programming language support",
+  "version": "0.0.4",
+  "publisher": "zserub",
+  "repository": {
+    "url": "https://github.com/zserub/MELFA-Basic"
+  },
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.83"
+    "vscode": "1.83.1"
   },
   "categories": [
     "Programming Languages",
     "Snippets",
     "Themes"
+  ],
+  "keywords": [
+    "language support",
+    "syntax highlight",
+    "formatter",
+    "snippets",
+    "script",
+    "MELFA",
+    "Mitsubishi",
+    "robot programming language"
   ],
   "contributes": {
     "languages": [
