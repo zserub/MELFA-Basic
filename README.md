@@ -24,8 +24,6 @@ Clone the repo manually to `C:\Users\%userprofile%\AppData\Local\Programs\Micros
 
 ### Activate formatter
 
-Run the `install.bat` or manually copy the `formatter.exe` to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code`
-
 Install [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
 
 Open settings.json *(Ctrl + Shift + P, delete >, type settings.json)*
@@ -34,10 +32,10 @@ Paste:
 ```
 "customLocalFormatters.formatters": [
         {
-            "command": "formatter.exe",
+            "command": "\"%localappdata%\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\MELFA-Basic\\formatter\\formatter.exe\"",
             "languages": ["prg"]
         }
-    ]
+    ],
 ```
 First time for formatting you have to choose customLocalFormatters
 
