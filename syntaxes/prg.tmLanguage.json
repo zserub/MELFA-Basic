@@ -105,7 +105,7 @@
 				},
 				{
 					"name": "storage.type",
-					"match": "\\b(?i:(Pos|Jnt|Inte|Float))\\bb"
+					"match": "\\b(?i:(Pos|Jnt|Inte|Float))\\b"
 				},
 				{
 					"name": "entity.name.tag",
