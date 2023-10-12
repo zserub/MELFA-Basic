@@ -105,11 +105,11 @@
 				},
 				{
 					"name": "storage.type",
-					"match": "(?i:(Pos|Jnt|Inte|Float))"
+					"match": "\\b(?i:(Pos|Jnt|Inte|Float))\\bb"
 				},
 				{
 					"name": "entity.name.tag",
-					"match": "(?i:(Mov|Mv(s|r|r2|r3|c|a| Tune|Spl)|Act|Ovrd|Spd|JOvrd|Cnt|Accel|Tool|Cmp( Jnt| Pos| Tool| Off|G)|Prec|Torq|JRC|Fine|Servo|H(Open|Close)|ColChk))"
+					"match": "(\\b)(?i:(Mov|Mv(s|r|r2|r3|c|a| Tune|Spl)|Act|Ovrd|Spd|JOvrd|Cnt|Accel|Tool|Cmp( Jnt| Pos| Tool| Off|G)|Prec|Torq|JRC|Fine|Servo|H(Open|Close)|ColChk))(\\b)"
 				}
 
 			]
