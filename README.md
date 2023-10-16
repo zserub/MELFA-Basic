@@ -30,7 +30,7 @@ Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Co
 
 Install [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
 
-Open settings.json *(Ctrl + Shift + P, delete >, type settings.json)*
+Open settings.json *([Ctrl + , ] -> custom local formatters -> `edit in settings.json`)*
 
 Paste:
 ```
