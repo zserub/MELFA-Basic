@@ -16,7 +16,11 @@ Mitsubishi robot programming language support for VS Code
 
 ## Setup and usage
 
-Clone the repo manually to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\`
+**Soon on marketplace**
+
+#### Manuall installation:
+
+Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\`
 
 ### Activate theme
 
