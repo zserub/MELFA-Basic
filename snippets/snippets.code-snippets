@@ -296,6 +296,11 @@
 		"prefix": ["mi", "mo"],
 		"body": ["M_${1|In,Inb,In8,Inw,In16,In32,Out,Outb,Out8,Outw,Out16,Out32,Dln,Dln32,DOut,DOut32,HndCq,XDev,XDevB,XDevW,XDevD,YDev,YDevB,YDevW,YDevD|}"],
 		"description": "I/O signals for several tasks"
+	},
+	"Label":{
+		"prefix": "*label",
+		"body": ["*${1:label name}\n\n\t${2:process}\n\n\tReturn\n\n'-------------------------------------------------------------------------"],
+		"description": "for subroutines"
 	}
 
 

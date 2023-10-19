@@ -6,7 +6,7 @@ import sys
 # output_file = "formatted.prg"
 
 start_patterns = re.compile(r'(\s*)(\*\w*|Select|Case|Default|If|For|While)(\b)')
-end_patterns = re.compile(r'(\s*)(End(If)?|Return|Break)(\b)')
+end_patterns = re.compile(r"(\s*)(End(If)?\b|'-----.*|Break\b)")
 # spaced_patterns = re.compile(r'(\s*)(=|Or|And|<(?!>)|(?<!<)>)(\s*)')
 spaced_patterns = ['=', 'Or', 'And']
 
@@ -48,16 +48,18 @@ def delete_whitespaces(input_line):
     return modified_line
 
 def indent_content(input_line, start_patterns, end_patterns, insert_tab_number):
-
-    if re.match("^\s*Else\\b", input_line):                               #Else handling
+    
+    if re.match("^\s*Else\\b", input_line):                                 #Else handling
         modified_line = '\t' * (insert_tab_number - 1) + input_line
     else:
         modified_line = '\t' * insert_tab_number + input_line
            
-    if re.match(end_patterns, input_line) and insert_tab_number > 0:      #End pattern check
+    if re.match(end_patterns, input_line) and insert_tab_number > 0:        #End pattern check
         insert_tab_number -= 1
-    if re.match(start_patterns, input_line):                              #Start pattern check
+    if re.match(start_patterns, input_line):                                #Start pattern check
         insert_tab_number += 1
+    if not input_line.startswith("'") and re.search('\\bThen\s(?=\w+)', input_line):    #One line 'if-then' handling
+        insert_tab_number -= 1
 
     # print('indents added')
     return modified_line, insert_tab_number
