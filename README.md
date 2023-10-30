@@ -18,7 +18,7 @@ Mitsubishi robot programming language support for VS Code
 
 **Soon on marketplace**
 
-#### Manuall installation:
+#### Manual installation:
 
 Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\`
 
@@ -44,5 +44,14 @@ Paste:
 First time for formatting you have to choose customLocalFormatters
 
 **Enjoy!**
+
+## How formatter works
+
+- Removes the line numbers and ' in empty lines
+- Adjust spaces
+
+Indent with the following logic:
+- Standard indentation rules for conditions and loops
+- Indent label based subroutines with '--- endings
 
 > Please open an issue if you found bugs or suggest features.

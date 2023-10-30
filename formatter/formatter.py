@@ -8,7 +8,8 @@ import sys
 start_patterns = re.compile(r'(\s*)(\*\w*|Select|Case|Default|If|For|While)(\b)')
 end_patterns = re.compile(r"(\s*)(End(If)?\b|'-----.*|Break\b)")
 # spaced_patterns = re.compile(r'(\s*)(=|Or|And|<(?!>)|(?<!<)>)(\s*)')
-spaced_patterns = ['=', 'Or', 'And']
+spaced_patterns = ['<=', '>=', '<>', 'Or', 'And']
+# spaced_patterns = ['Or', 'And']
 
 def read_prg_file(input_file):
     try:
@@ -67,8 +68,11 @@ def indent_content(input_line, start_patterns, end_patterns, insert_tab_number):
 def add_spaces(line):
     for pattern in spaced_patterns:
         line = re.sub(r'\s*{}\s*'.format(re.escape(pattern)), ' {} '.format(pattern), line)
-    line = re.sub(r'(\s*)<(?!>)(\s*)', ' < ', line)
-    line = re.sub(r'(\s*)(?<!<)>(\s*)', ' > ', line)
+    line = re.sub(r'(\s*)<(?!>|=)(\s*)', ' < ', line)
+    line = re.sub(r'(\s*)(?<!<)>(?!=)(\s*)', ' > ', line)
+    line = re.sub(r'(\s*)(?<!<|>)=(\s*)', ' = ', line)
+        
+        
     # print('spaces added')
     return line
 

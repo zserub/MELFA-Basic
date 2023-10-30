@@ -3,7 +3,7 @@ import re
 
 def main():
     # Specify the relative path to the "programs" subfolder
-    programs_folder = "./programs"
+    programs_folder = "d:\\Mitsubishi\\Active"
 
     # Iterate over the files in the "programs" subfolder
     for filename in os.listdir(programs_folder):
