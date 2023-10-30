@@ -9,6 +9,8 @@ Mitsubishi robot programming language support for VS Code
 - Custom color theme
 - Formatter (additional extension required)
 
+![Showcase](etc/Screenshot.png)
+
 
 ## Requirements
 
