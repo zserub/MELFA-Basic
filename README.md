@@ -1,20 +1,25 @@
 # MELFA-Basic language extension
 
-Mitsubishi robot programming language support for VS Code
+**Mitsubishi robot programming language support for VS Code**
+
+*Open melfa codes in VS Code, write then jump to RT Toolbox for upload.*
 
 ## Features
 
 - Syntax highlight
 - Snippets
 - Custom color theme
-- Formatter (additional extension required)
+- 2 type formatters (additional extension required)
+<br>
+<br>
 
 ![Showcase](etc/Screenshot.png)
 
 
-## Requirements
+### Requirements
 
-[Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
+- Python (or you can use formatter.exe instead)
+- [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
 
 ## Setup and usage
 
@@ -26,9 +31,11 @@ Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Co
 
 ### Activate theme
 
-`Ctrl + Shift + P` -> `Preferences: Color Theme` -> `Dark Theme for MELFA-Basic`
+`Ctrl + Shift + P` --> `Preferences: Color Theme` --> `Dark Theme for MELFA-Basic`
 
-### Activate formatter
+
+
+## Activate 'deformer'
 
 Install [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
 
@@ -38,14 +45,14 @@ Paste:
 ```
 "customLocalFormatters.formatters": [
         {
-            "command": "\"%localappdata%\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\MELFA-Basic\\formatter\\formatter.exe\"",
-            "languages": ["prg"]
+            "command":"python \"%localappdata%\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\MELFA-Basic\\formatter\\deformerV2.py\"",
+            "languages": ["melfa-basic"]
         }
     ],
 ```
-First time for formatting you have to choose customLocalFormatters
+**Deformer usage:**
 
-**Enjoy!**
+`Ctrl + Shift + P` **-->** `Format document with...` **-->** `Custom Local Formatters`
 
 ## How formatter works
 
@@ -55,5 +62,11 @@ First time for formatting you have to choose customLocalFormatters
 Indent with the following logic:
 - Standard indentation rules for conditions and loops
 - Indent label based subroutines with '--- endings
+
+### Deformer
+
+Formats the code for RT Toolbox.
+- Insert line numbers (Toolbox will readjust)
+- Comment empty lines so Toolbox won't delete them
 
 > Please open an issue if you found bugs or suggest features.

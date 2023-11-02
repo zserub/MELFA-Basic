@@ -1,4 +1,6 @@
-# import sys
+# Test version
+# Reads the content of the input .prg file and writes the modified content to the output file
+
 import re
 
 # Define the input and output file names

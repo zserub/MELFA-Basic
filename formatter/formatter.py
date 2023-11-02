@@ -1,34 +1,9 @@
 import re
 import sys
 
-# Define the input and output file names
-# input_file = "1.prg"
-# output_file = "formatted.prg"
-
 start_patterns = re.compile(r'(\s*)(\*\w*|Select|Case|Default|If|For|While)(\b)')
 end_patterns = re.compile(r"(\s*)(End(If)?\b|'-----.*|Break\b)")
-# spaced_patterns = re.compile(r'(\s*)(=|Or|And|<(?!>)|(?<!<)>)(\s*)')
 spaced_patterns = ['<=', '>=', '<>', 'Or', 'And']
-# spaced_patterns = ['Or', 'And']
-
-def read_prg_file(input_file):
-    try:
-        with open(input_file, 'r', encoding='utf-8') as file:
-            return file.read()
-    except FileNotFoundError:
-        print(f"File not found: {input_file}")
-        return None
-    except Exception as e:
-        print(f"An error occurred while reading the file: {e}")
-        return None
-
-def write_prg_file(input_file, content):
-    try:
-        with open(input_file, 'w', encoding='utf-8') as file:
-            file.write(content)
-        print(f"File saved successfully: {input_file}")
-    except Exception as e:
-        print(f"An error occurred while writing the file: {e}")
         
 def delete_line_numbers(input_line):
     modified_content = re.sub(r'^\d*', '', input_line)
@@ -78,8 +53,6 @@ def add_spaces(line):
 
 def main():
 
-    # Read the content of the input .prg file
-    # input_content = read_prg_file(input_file)
     input_content = sys.stdin.read()
 
     if input_content is not None:
@@ -95,8 +68,6 @@ def main():
             
             modified_content += modified_line + '\n'
 
-        # Save the modified content to the output file
-        # write_prg_file(output_file, modified_content)
         sys.stdout.write(modified_content)
 
 if __name__ == "__main__":

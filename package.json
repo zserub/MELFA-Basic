@@ -2,14 +2,16 @@
   "name": "melfa-basic",
   "displayName": "MELFA-Basic",
   "description": "Mitsubishi robot programming language support",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "publisher": "zserub",
+  "author": "Ruben Zsedely",
   "repository": {
+    "type": "git",
     "url": "https://github.com/zserub/MELFA-Basic"
   },
   "license": "MIT",
   "engines": {
-    "vscode": "1.83.1"
+    "vscode": "1.84.0"
   },
   "categories": [
     "Programming Languages",
@@ -26,30 +28,50 @@
     "Mitsubishi",
     "robot programming language"
   ],
+  "activationEvents": [
+    "onLanguage:melfa-basic"
+  ],
+  "main": "./extension",
   "contributes": {
+    "configuration": {
+      "title": "MELFA-Basic language support",
+      "properties": {
+        "description": "Array of melfa-basic settings",
+        "default": [],
+        "items": {
+          "type": "object",
+          "description": "Modify json",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "The command to run. Should accept the code's text through STDIN and output the formatted result through STDOUT"
+            }
+          }
+        }
+      }
+    },
     "languages": [
       {
-        "id": "prg",
+        "id": "melfa-basic",
         "extensions": [
           ".prg"
         ],
         "aliases": [
-          "MELFA-Basic",
-          "prg"
+          "MELFA-Basic"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "prg",
+        "language": "melfa-basic",
         "scopeName": "source.prg",
         "path": "./syntaxes/prg.tmLanguage.json"
       }
     ],
     "snippets": [
       {
-        "language": "prg",
+        "language": "melfa-basic",
         "path": "./snippets/snippets.code-snippets"
       }
     ],
@@ -59,6 +81,13 @@
         "uiTheme": "vs-dark",
         "path": "./themes/Dark Theme for MELFA-Basic-color-theme.json"
       }
-    ]
+    ],
+    "capabilities": {
+      "documentFormattingProvider": "true",
+      "documentRangeFormattingProvider": "true"
+    }
+  },
+  "devDependencies": {
+    "vscode": "^1.83.1"
   }
 }
