@@ -4,15 +4,17 @@
 
 *Open melfa codes in VS Code, write then jump to RT Toolbox for upload.*
 
+[![twitter](https://img.shields.io/badge/follow-zserub_-blue?style=flat&logo=Twitter)](https://twitter.com/zserub)
+[![tea](https://img.shields.io/badge/buy%20me-%E2%98%95%EF%B8%8F%20tea-yellow.svg)](https://ko-fi.com/metaphysix)
+
 ## Features
 
-- Syntax highlight
-- Snippets
-- Custom color theme
-- 2 type formatters (additional extension required)
+- **Syntax highlight**
+- **Snippets**
+- **Custom color theme**
+- **2 type formatters (additional extension required)**
 <br>
 <br>
-
 ![Showcase](etc/Screenshot.png)
 
 
