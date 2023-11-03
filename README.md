@@ -13,7 +13,11 @@
 - **Snippets**
 - **Custom color theme**
 - **2 type formatters (additional extension required)**
-<br>
+
+### TO-DO:
+
+- [ ] Selectable label closing in settings
+
 <br>
 
 ![Showcase](etc/Screenshot.png)
