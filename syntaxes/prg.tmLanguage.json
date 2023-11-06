@@ -89,7 +89,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.type",
-					"match": "\\B\\*\\w*"
+					"match": "\\B\\*\\w+"
 				}
 			]
 		},

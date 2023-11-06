@@ -14,7 +14,7 @@
 - **Custom color theme**
 - **2 type formatters (additional extension required)**
 
-### TO-DO:
+### Upcoming features:
 
 - [ ] Selectable label closing in settings
 
@@ -30,11 +30,13 @@
 
 ## Setup and usage
 
-**Soon on marketplace**
+**Install on marketplace**
 
-#### Manual installation:
+or
 
-Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\`
+#### *Manual installation:*
+
+*Clone the repo to `C:\Users\%userprofile%\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\`*
 
 ### Activate theme
 
@@ -75,5 +77,7 @@ Indent with the following logic:
 Formats the code for RT Toolbox.
 - Insert line numbers (Toolbox will readjust)
 - Comment empty lines so Toolbox won't delete them
+
+<br>
 
 > Please open an issue if you found bugs or suggest features.

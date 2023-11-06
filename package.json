@@ -3,8 +3,9 @@
   "displayName": "MELFA-Basic",
   "description": "Mitsubishi robot programming language support",
   "version": "0.1.0",
-  "publisher": "zserub",
-  "author": "Ruben Zsedely",
+  "publisher": "Metaphysix",
+  "icon": "etc/logo.jpg",
+  "galleryBanner.color": "#FE0103",
   "repository": {
     "type": "git",
     "url": "https://github.com/zserub/MELFA-Basic"
