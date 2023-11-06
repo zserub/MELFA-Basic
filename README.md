@@ -12,11 +12,23 @@
 - **Syntax highlight**
 - **Snippets**
 - **Custom color theme**
-- **2 type formatters (additional extension required)**
+- **2 type formatters** *(additional extension required)*
 
 ### Upcoming features:
 
 - [ ] Selectable label closing in settings
+
+## Workflow
+
+Create a new workspace in RT Toolbox, then open the prg file with VS Code
+
+**or** Select an existing program for modification.
+
+Format code to get rid of the line numbers.
+
+Write your program. After finishing your program, run the `deformer` to apply back the line numbers (Toolbox will automatically update the ones).
+
+Open the file in RT Toolbox, then upload to the robot.
 
 <br>
 
@@ -26,11 +38,11 @@
 ### Requirements
 
 - Python (or you can use formatter.exe instead)
-- [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
+- [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters) (for running the 'deformer' in VS Code)
 
-## Setup and usage
+## Setup
 
-**Install on marketplace**
+**Install from marketplace**
 
 or
 
@@ -40,15 +52,15 @@ or
 
 ### Activate theme
 
-`Ctrl + Shift + P` --> `Preferences: Color Theme` --> `Dark Theme for MELFA-Basic`
+`Ctrl + Shift + P` **-->** `Preferences: Color Theme` **-->** `Dark Theme for MELFA-Basic`
 
 
 
-## Activate 'deformer'
+## Setup 'deformer'
 
 Install [Custom Local Formatters](https://marketplace.visualstudio.com/items?itemName=jkillian.custom-local-formatters)
 
-Open settings.json *([Ctrl + , ] -> custom local formatters -> `edit in settings.json`)*
+Open settings.json *([Ctrl + , ] --> custom local formatters --> `edit in settings.json`)*
 
 Paste:
 ```
