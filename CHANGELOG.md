@@ -1,5 +1,8 @@
 # Change Log
 
+## Version 0.1.1
+- Minor bugfixes
+
 ## Version 0.1.0
 
 - Added built in formatter (via extension.js)

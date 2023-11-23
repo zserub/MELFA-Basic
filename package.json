@@ -2,7 +2,7 @@
   "name": "melfa-basic",
   "displayName": "MELFA-Basic",
   "description": "Mitsubishi robot programming language support",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "Metaphysix",
   "icon": "etc/logo.jpg",
   "galleryBanner.color": "#FE0103",
@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "engines": {
-    "vscode": "1.84.0"
+    "vscode": "^1.84.0"
   },
   "categories": [
     "Programming Languages",
