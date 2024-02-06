@@ -7,6 +7,8 @@
 [![twitter](https://img.shields.io/badge/follow-zserub_-blue?style=flat&logo=Twitter)](https://twitter.com/zserub)
 [![tea](https://img.shields.io/badge/buy%20me-%E2%98%95%EF%B8%8F%20tea-yellow.svg)](https://ko-fi.com/metaphysix)
 
+*Do you want this syntax highlight online? Check out my [MELFA for highlight.js repo](https://github.com/zserub/MELFA-highlight.js)*
+
 ## Features
 
 - **Syntax highlight**
