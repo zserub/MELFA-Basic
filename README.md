@@ -16,10 +16,6 @@
 - **Custom color theme**
 - **2 type formatters** *(additional extension required)*
 
-### Upcoming features:
-
-- [ ] Selectable label closing in settings
-
 ## Workflow
 
 Create a new workspace in RT Toolbox, then open the prg file with VS Code
@@ -79,8 +75,9 @@ Paste:
 
 ## How formatter works
 
-- Removes the line numbers and ' in empty lines
+- Removes the line numbers and `'` in empty lines
 - Adjust spaces
+- Corrects uppercase in keywords
 
 Indent with the following logic:
 - Standard indentation rules for conditions and loops
