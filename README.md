@@ -84,7 +84,7 @@ Paste:
 
 Indent with the following logic:
 - Standard indentation rules for conditions and loops
-- Indent label based subroutines with '--- endings
+- Reset indentation after new label
 
 ### Deformer
 
