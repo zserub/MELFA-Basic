@@ -22,7 +22,7 @@ def add_single_quotes(line):
     return line
 
 def add_line_numbers(line):
-    if not re.match(r'^\d+ ', line):
+    if not (re.match(r'^\d+ ', line) or (re.match(r'^[P|J]_\w+=\(\d', line))):
         line = '1 ' + line
     return line
 

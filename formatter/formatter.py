@@ -16,7 +16,7 @@ class CodeFormatter:
 
     start_patterns = re.compile(
         r'(^\*\w+|Select|Case|Default|If|For|While)(\b)')
-    end_patterns = r"(\s*)(End(If)?\b|Break\b)"
+    end_patterns = r"((\b)(End(If)?|Break|WEnd|FEnd)(\b))"
     # label=re.compile(r'(^\*\w+')
     # additional_endPatterns = r"'---.*"
     # spaced_patterns = re.compile(r'(\s*)(=|Or|And|<(?!>)|(?<!<)>)(\s*)')
@@ -99,7 +99,7 @@ class CodeFormatter:
         modified_line = self.delete_single_quotes(modified_line)
         modified_line = self.delete_whitespaces(modified_line)
         modified_line = self.indent_content(modified_line)
-        if not modified_line.startswith("'"):
+        if (not modified_line.startswith("'")) and (not re.match(r"[P|J]_\w+=\(\d", modified_line)):
             modified_line = self.add_spaces(modified_line)
         modified_line = self.check_keywords(modified_line)
         return modified_line

@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.1.3
+- Added missing keywords for indentations
+- Fixed the position handling in the end
+
+## Version 0.1.2
+- Upgraded formatter
+- keyword case correction
+- Updated label indentation rule
+
 ## Version 0.1.1
 - Minor bugfixes
 
