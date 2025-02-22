@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 0.1.4
+- Added highlights for missing keywords
+- Started integrating MELFA 6 syntaxis
+
 ## Version 0.1.3
 - Added missing keywords for indentations
 - Fixed the position handling in the end

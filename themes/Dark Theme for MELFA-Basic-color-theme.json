@@ -701,6 +701,18 @@
 			"settings": {
 				"foreground": "#B267E6"
 			}
+		},
+		{
+			"scope": "declared.constant",
+			"settings": {
+				"foreground": "#34b5ff"
+			}
+		},
+		{
+			"scope": "digital.input",
+			"settings": {
+				"foreground": "#bb0073"
+			}
 		}
 	]
 }

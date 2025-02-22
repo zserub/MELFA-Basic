@@ -56,7 +56,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "(?i:\\b(While|Select|Case|Else(If)?|For|To|Return|Default|If|Then|Wth(If)?)\\b)"
+					"match": "(?i:\\b(While|Select|Case|Else(If)?|For|To|Return|Default|If|Then|Wth(If)?)|#Include\\b)"
 				},
 				{
 					"name": "keyword.control.end",
@@ -77,6 +77,10 @@
 				{
 					"match": "!|\\$|%|&|\\-|\\+|~|==|=|!=|!==|<=|>=|#=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|/=|%=|\\+=|\\-=|&=|\\^=\\b",
 					"name": "keyword.operator.js"
+				},
+				{
+					"name": "declared.constant",
+					"match": "(?i:\\bConst\\b)"
 				}
 			]
 		},
@@ -90,6 +94,10 @@
 				{
 					"name": "entity.name.type",
 					"match": "\\B\\*\\w+"
+				},
+				{
+					"name": "digital.input",
+					"match": "(iDI\\w+|iDO\\w+)"
 				}
 			]
 		},
@@ -105,11 +113,11 @@
 				},
 				{
 					"name": "storage.type",
-					"match": "\\b(?i:(Pos|Jnt|Inte|Float))\\b"
+					"match": "\\b(?i:(Pos|Jnt|Inte|Float|Char|Double|Long|))\\b"
 				},
 				{
 					"name": "entity.name.tag",
-					"match": "(\\b)(?i:(Mov|Mv(s|r|r2|r3|c|a| Tune|Spl)|Act|Ovrd|Spd|JOvrd|Cnt|Accel|Tool|Cmp( Jnt| Pos| Tool| Off|G)|Prec|Torq|JRC|Fine|Servo|H(Open|Close)|ColChk))(\\b)"
+					"match": "(\\b)(?i:(Mov|Mv(s|r|r2|r3|c|a| Tune|Spl)|Act|Ovrd|Spd|JOvrd|Cnt|Accel|Tool|Cmp( Jnt| Pos| Tool| Off|G)|Prec|Torq|JRC|Fine|Servo|H(Open|Close)|ColChk|Dim))(\\b)"
 				}
 
 			]
